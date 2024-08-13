@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="pl" class="html-tag">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Avtofors - Twój niezawodny serwis samochodowy w Warszawie. Blacharstwo, lakiernictwo, naprawy silników i zawieszenia, obsługa klimatyzacji samochodowej i wiele więcej. Skontaktuj się z nami!" />
+    <meta property="og:title" content="Avtofors - Serwis samochodowy w Warszawie" />
+    <meta property="og:description" content="Blacharstwo, lakiernictwo, naprawy silników i zawieszenia, obsługa klimatyzacji. Wysoka jakość, przystępne ceny!" />
+    <link rel="shortcut icon" href="./src/favicon/avtofors.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Avtofors</title>
+    <link rel="stylesheet" href="./style-min.css" />
+  </head>
+  <body class="body overflowHiden">
+    <div class="loader-wrapper active" id="loader">
+      <div class="loader">
+        <div class="left-gate"></div>
+        <!-- <div class="right-gate"></div> -->
+        <img
+          src="./src/logo/avtofors-top.webp"
+          id="logo_image"
+          alt="avtofors_logo"
+          width="800px"
+        />
+      </div>
+    </div>
+    <header class="header">
+      <nav class="navbar">
+        <ul class="nav">
+          <li><a href="#section_2" data-i18n="about_us">О нас</a></li>
+          <li><a href="#section_3" data-i18n="map">Карта</a></li>
+          <li><a href="#section_3" data-i18n="contacts">Контакты</a></li>
+          <li><a href="#section_4" data-i18n="services">Услуги</a></li>
+        </ul>
+
+        <button class="menu-mobile" onclick="openMobileMenu()">
+          <img src="./src/icons/hamburger.webp" alt="ds12" class="menu-icon" />
+        </button>
+      </nav>
+
+      <nav class="popup-menu-mobile">
+        <div class="popup-wrapper">
+          <div class="actions">
+            <button class="close-popup-menu" onclick="openMobileMenu()">
+              <img src="./src/icons/right-arrow.webp" alt="ds12" />
+            </button>
+          </div>
+          <ul class="nav-mobile">
+            <div class="title-nav">AvtoFors</div>
+            <li>
+              <a
+                href="#section_2"
+                data-i18n="about_us"
+                onclick="openMobileMenu()"
+                >О нас</a
+              >
+            </li>
+            <li>
+              <a href="#section_3" data-i18n="map" onclick="openMobileMenu()"
+                >Карта</a
+              >
+            </li>
+            <li>
+              <a
+                href="#section_3"
+                data-i18n="contacts"
+                onclick="openMobileMenu()"
+                >Контакты</a
+              >
+            </li>
+            <li>
+              <a
+                href="#section_4"
+                data-i18n="services"
+                onclick="openMobileMenu()"
+                >Услуги</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="logo-container">
+        <div class="logo">
+          <div class="text-logo">AvtoFors</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <!-- <button
+          class="button changeLang"
+          id="btn_en"
+          onclick="changeLng('en')"
+        > -->
+
+        <button class="button open-lang-menu" id="open-lang-menu">
+          <div class="title-actions desktop" data-i18n="language">Язык</div>
+          <img src="./src/icons/flag/languages.png" alt="img_en" />
+        </button>
+        <!-- <button
+          class="button changeLang"
+          id="btn_uk"
+          onclick="changeLng('uk')"
+        >
+          <img
+            src="./sources/icons/free-icon-ukraine-330540.webp"
+            alt="img_uk"
+          />
+        </button> -->
+      </div>
+
+      <div class="lang-menu" id="lang-menu">
+        <div class="popup-lang" id="popup-lang">
+          <div class="button-wrapper">
+            <button
+              class="button changeLang"
+              id="btn_en"
+              onclick="changeLng('en')"
+            >
+              <img src="./src/icons/flag/united-kingdom.png" alt="img_en" />
+            </button>
+          </div>
+
+          <div class="button-wrapper">
+            <button
+              class="button changeLang"
+              id="btn_uk"
+              onclick="changeLng('uk')"
+            >
+              <img src="./src/icons/flag/ukraine.png" alt="img_uk" />
+            </button>
+          </div>
+
+          <div class="button-wrapper">
+            <button
+              class="button changeLang"
+              id="btn_pl"
+              onclick="changeLng('pl')"
+            >
+              <img src="./src/icons/flag/poland.png" alt="img_uk" />
+            </button>
+          </div>
+
+          <div class="button-wrapper">
+            <button
+              class="button changeLang"
+              id="btn_ru"
+              onclick="changeLng('ru')"
+            >
+              <img src="./src/icons/flag/russia.png" alt="img_ru" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="section_1">
+        <div class="slide-2-mob">
+          <div class="carousel-wrapper">
+            <div class="carousel-container no-select">
+              <div class="carousel-show-block">
+                <div class="carousel-item item_1">
+                  <!-- <img
+                    src="./src/images/img_10.webp"
+                    loading="lazy"
+                    alt="ddwq32"
+                  /> -->
+                  <div class="text-container text-info-black">
+                    <div class="title" data-i18n="bodywork_and_painting">
+                      Рихтовка и покраска
+                    </div>
+                    <div class="info">
+                      <p data-i18n="bodywork_and_painting_info_1">
+                        Восстановим внешний вид вашего автомобиля до идеала.
+                        Рихтовка, покраска, устранение царапин и вмятин.
+                        Гарантия на все виды работ. Ваш автомобиль будет как
+                        новый!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item item_2">
+                  <!-- <img
+                    src="./src/images/img_09.webp"
+                    loading="lazy"
+                    alt="ddwq32"
+                  /> -->
+                  <div class="text-container text-info-white">
+                    <div class="title" data-i18n="auto_service">Автосервис</div>
+                    <div class="info">
+                      <p data-i18n="auto_service_info_1">
+                        Профессиональный ремонт и обслуживание вашего
+                        автомобиля. Надежные мастера, качественные запчасти,
+                        доступные цены. Доверьте свой автомобиль нашим
+                        специалистам!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item item_3">
+                  <!-- <img
+                    src="./src/images/img_11.webp"
+                    loading="lazy"
+                    alt="ddwq32"
+                  /> -->
+                  <div class="text-container text-info-white">
+                    <div
+                      class="title"
+                      data-i18n="car_air_conditioning_recharge"
+                    >
+                      Заправка автокондиционера
+                    </div>
+                    <div class="info">
+                      <p data-i18n="car_air_conditioning_recharge_info_1">
+                        Обеспечьте комфорт в салоне вашего автомобиля даже в
+                        самые жаркие дни. Заправка и обслуживание
+                        автокондиционеров по выгодной цене. Быстро, качественно,
+                        надежно!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section_2">
+        <div class="container">
+          <div class="title" data-i18n="our_advantages">Наши преимущества</div>
+          <div class="items-container">
+            <div class="item">
+              <div class="item-logo">
+                <img src="./src/icons/i1.webp" alt="dw12" class="item-image" />
+              </div>
+              <div class="item-title" data-i18n="fast_service">
+                Быстрый Прием
+              </div>
+              <div class="item-info" data-i18n="fast_service_info">
+                Забудьте о долгом ожидании. Мы принимаем ваш автомобиль на
+                ремонт без задержек. Экономьте свое время!
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-logo">
+                <img src="./src/icons/i2.webp" alt="dw12" class="item-image" />
+              </div>
+              <div class="item-title" data-i18n="spare_parts_availability">
+                Запчасти в Наличии
+              </div>
+              <div class="item-info" data-i18n="spare_parts_availability_info">
+                Широкий ассортимент запчастей всегда в наличии. Ваш автомобиль
+                будет отремонтирован в кратчайшие сроки!
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-logo">
+                <img src="./src/icons/i3.webp" alt="dw12" class="item-image" />
+              </div>
+              <div class="item-title" data-i18n="high_quality">
+                Высокое Качество
+              </div>
+              <div class="item-info" data-i18n="high_quality_info">
+                Наши мастера гарантируют качественный ремонт. Современное
+                оборудование и профессиональный подход к каждому автомобилю.
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-logo">
+                <img src="./src/icons/i4.webp" alt="dw12" class="item-image" />
+              </div>
+              <div class="item-title" data-i18n="work_warranty">
+                Гарантия на Работы
+              </div>
+              <div class="item-info" data-i18n="work_warranty_info">
+                Мы уверены в качестве наших услуг и предоставляем гарантию на
+                все виды работ. Спокойствие и уверенность в каждом километре.
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-logo">
+                <img src="./src/icons/i5.webp" alt="dw12" class="item-image" />
+              </div>
+              <div class="item-title" data-i18n="affordable_prices">
+                Доступные Цены
+              </div>
+              <div class="item-info" data-i18n="affordable_prices_1">
+                Высокое качество не всегда должно быть дорогим. У нас вы найдете
+                лучшие цены на ремонт и обслуживание автомобиля.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section_4" class="section">
+        <div class="container">
+          <div class="wrapper">
+            <button class="button-toggle-accordion">
+              <img src="./src/icons/chevron-up-solid.svg" alt="d21" />
+            </button>
+            <div
+              class="title accordion-title"
+              data-i18n="painting_and_straightening"
+            >
+              Покраска и рихтовка
+            </div>
+            <div class="info-container accordion-text">
+              <div class="item-info">
+                <p data-i18n="full_painting">Полная покраска:</p>
+                <span data-i18n="full_painting_info"
+                  >Полная перекраска автомобиля с использованием качественных
+                  лакокрасочных материалов.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="partial_painting_of_parts">
+                  Частичная покраска деталей:
+                </p>
+                <span data-i18n="partial_painting_of_parts_info"
+                  >Локальная покраска поврежденных деталей, идеально совпадающая
+                  с основным цветом.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="body_repair">Ремонт кузова:</p>
+                <span data-i18n="body_repair_info"
+                  >Восстановление геометрии кузова, устранение вмятин и других
+                  дефектов.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="repair_and_painting_turnkey">
+                  Ремонт и покраска под ключ:
+                </p>
+                <span data-i18n="repair_and_painting_turnkey_info"
+                  >Комплексное восстановление автомобиля, включающее рихтовку,
+                  покраску и финальную полировку.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section_5" class="section">
+        <div class="container">
+          <div class="wrapper">
+            <button class="button-toggle-accordion">
+              <img src="./src/icons/chevron-up-solid.svg" alt="d21" />
+            </button>
+            <div class="title accordion-title" data-i18n="car_maintenance">
+              Техобслуживание автомобиля
+            </div>
+            <div class="info-container accordion-text">
+              <div class="item-info">
+                <p data-i18n="full_maintenance">Полное обслуживание:</p>
+                <span data-i18n="full_maintenance_info"
+                  >Все виды технического обслуживания, включая замену жидкостей,
+                  фильтров и диагностику всех систем.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="partial">Частичное (замена масел и фильтров):</p>
+                <span data-i18n="partial_info"
+                  >Быстрая замена моторного масла и всех типов фильтров
+                  (масляных, воздушных, топливных).</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="vehicle_inspection">Осмотр автомобиля:</p>
+                <span data-i18n="vehicle_inspection_info"
+                  >Визуальный и технический осмотр автомобиля для выявления
+                  текущих и потенциальных проблем.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="fault_diagnostics">Диагностика неисправностей:</p>
+                <span data-i18n="fault_diagnostics_info"
+                  >Комплексная диагностика всех систем автомобиля с
+                  использованием современного оборудования.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section_10" class="section">
+        <div class="container">
+          <div class="wrapper">
+            <button class="button-toggle-accordion">
+              <img src="./src/icons/chevron-up-solid.svg" alt="d21" />
+            </button>
+            <div class="title accordion-title" data-i18n="suspension_repair">
+              Ремонт подвески
+            </div>
+            <div class="info-container accordion-text">
+              <div class="item-info">
+                <p data-i18n="shock_absorbers_springs_replacement">
+                  Замена амортизаторов / пружин:
+                </p>
+                <span data-i18n="shock_absorbers_springs_replacement_info"
+                  >Профессиональная замена амортизаторов и пружин для
+                  восстановления комфортной и безопасной езды.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="pneumatic_system_maintenance">
+                  Обслуживание пневмосистемы:
+                </p>
+                <span data-i18n="pneumatic_system_maintenance_info"
+                  >Диагностика и ремонт пневмоподвески, замена воздушных
+                  баллонов и компрессоров.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="adaptive_suspension_repair">
+                  Ремонт адаптивной подвески:
+                </p>
+                <span data-i18n="adaptive_suspension_repair_info"
+                  >Ремонт и калибровка адаптивных систем подвески для
+                  обеспечения оптимальной управляемости.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="fault_diagnostics">Диагностика неисправностей:</p>
+                <span data-i18n="suspension_issue_detection_info"
+                  >Поиск и устранение проблем в подвеске с использованием
+                  специализированного оборудования.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="fault_elimination">Устранение неисправностей:</p>
+                <span data-i18n="fault_elimination_info"
+                  >Ремонт и замена изношенных или поврежденных элементов
+                  подвески.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="control_arms_bushings_replacement">
+                  Замена рычагов / сайлентблоков:
+                </p>
+                <span data-i18n="control_arms_bushings_replacement_info"
+                  >Замена рычагов подвески и сайлентблоков для восстановления
+                  управляемости и комфорта.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section_6" class="section">
+        <div class="container">
+          <div class="wrapper">
+            <button class="button-toggle-accordion">
+              <img src="./src/icons/chevron-up-solid.svg" alt="d21" />
+            </button>
+            <div class="title accordion-title" data-i18n="engine_repair">
+              Ремонт двигателей
+            </div>
+            <div class="info-container accordion-text">
+              <div class="item-info">
+                <p data-i18n="timing_drive_replacement">Замена приводов ГРМ:</p>
+                <span data-i18n="timing_drive_replacement_info"
+                  >Замена ремней и цепей ГРМ, роликов и натяжителей для
+                  обеспечения правильной работы двигателя.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="cylinder_head_repair">Ремонт ГБЦ:</p>
+                <span data-i18n="cylinder_head_repair_info"
+                  >Ремонт и восстановление головки блока цилиндров, замена
+                  прокладок, регулировка клапанов.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="engine_repair_info">Ремонт двигателя:</p>
+                <span data-i18n="engine_repair_info"
+                  >Комплексный ремонт двигателя, включающий замену изношенных
+                  деталей и настройку всех систем.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="fault_diagnostics">Диагностика неисправностей:</p>
+                <span data-i18n="fault_diagnostics_info_1"
+                  >Выявление проблем в работе двигателя с использованием
+                  специализированного диагностического оборудования.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section_7" class="section">
+        <div class="container">
+          <div class="wrapper">
+            <button class="button-toggle-accordion">
+              <img src="./src/icons/chevron-up-solid.svg" alt="d21" />
+            </button>
+            <div class="title accordion-title" data-i18n="transmission_repair">
+              Ремонт КПП / АКПП
+            </div>
+            <div class="info-container accordion-text">
+              <div class="item-info">
+                <p data-i18n="oil_replacement">Замена масел:</p>
+                <span data-i18n="oil_replacement_info"
+                  >Замена масла в механических и автоматических коробках передач
+                  для продления срока службы агрегатов.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="clutch_replacement">Замена сцепления:</p>
+                <span data-i18n="clutch_replacement_info"
+                  >Замена сцепления и всех сопутствующих деталей для обеспечения
+                  плавного переключения передач.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="adaptation">Адаптация:</p>
+                <span data-i18n="adaptation_info"
+                  >Адаптация автоматических коробок передач после ремонта или
+                  замены масла для правильной работы.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="transmission_repair_info">Ремонт КПП:</p>
+                <span data-i18n="transmission_repair_info"
+                  >Ремонт механических и автоматических коробок передач любой
+                  сложности.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="fault_diagnostics">Диагностика неисправностей:</p>
+                <span data-i18n="fault_diagnostics_info_2"
+                  >Диагностика проблем в КПП и АКПП с использованием
+                  современного оборудования.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section_8" class="section">
+        <div class="container">
+          <div class="wrapper container-accordion">
+            <button class="button-toggle-accordion">
+              <img src="./src/icons/chevron-up-solid.svg" alt="d21" />
+            </button>
+            <div
+              class="title accordion-title"
+              data-i18n="auto_air_conditioners"
+            >
+              Автокондиционеры
+            </div>
+            <div class="info-container accordion-text">
+              <div class="item-info">
+                <p data-i18n="fault_diagnostics">Диагностика:</p>
+                <span data-i18n="diagnostics_info_3"
+                  >Полная диагностика системы кондиционирования для выявления
+                  утечек и неисправностей.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="air_conditioning_refill">
+                  Заправка системы кондиционера:
+                </p>
+                <span data-i18n="air_conditioning_refill_info"
+                  >Заправка хладагентом и проверка работы системы
+                  кондиционирования.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="leak_test">Проверка утечек:</p>
+                <span data-i18n="leak_test_info"
+                  >Тестирование системы на герметичность, обнаружение и
+                  устранение утечек.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="air_conditioning_system_repair">
+                  Ремонт системы кондиционера:
+                </p>
+                <span data-i18n="air_conditioning_system_repair_info"
+                  >Ремонт всех компонентов системы кондиционирования, включая
+                  трубки, радиаторы и компрессоры.</span
+                >
+              </div>
+              <div class="item-info">
+                <p data-i18n="compressor_replacement">
+                  Замена компрессора кондиционера:
+                </p>
+                <span data-i18n="compressor_replacement_info"
+                  >Замена компрессора и сопутствующих деталей для восстановления
+                  работоспособности кондиционера.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section_3" class="section">
+        <div class="container">
+          <div class="title" data-i18n="contacts">Контакты</div>
+          <div class="item-container">
+            <div class="info">
+              <div class="title" data-i18n="address">
+                Avtofors ул. Инсталяторов
+              </div>
+              <div class="text-info">
+                <a
+                  href="https://maps.app.goo.gl/oTsKsPND91dqkSwY8"
+                  target="_blank"
+                >
+                  Instalatorów 7C, <br /><span data-i18n="city"
+                    >02-237 Варшава, Польша</span
+                  >
+                </a>
+              </div>
+              <div class="text-info">
+                <a href="tel:+48576600198"> +48 576 600 198 </a>
+              </div>
+              <div class="text-info">
+                <a href="tel:+48881702834"> +48 881 702 834 </a>
+              </div>
+              <div class="text-info" data-i18n="mon_fri">ПН-ПТ 09:00-18:00</div>
+              <div class="text-info" data-i18n="sat">СБ 09:00-15:00</div>
+            </div>
+            <div class="image-map-container">
+              <a
+                href="https://maps.app.goo.gl/oTsKsPND91dqkSwY8"
+                target="_blank"
+              >
+                <img
+                  src="./src/maps/instalatorov.webp"
+                  alt="avtofors-instalatorov"
+              /></a>
+            </div>
+          </div>
+          <div class="delimiter"></div>
+          <!-- <div class="item-container">
+            <div class="info">
+              <div class="title">Avtofors ул. Острога</div>
+              <div class="text-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                corrupti?
+              </div>
+            </div>
+            <div class="image-map-container">
+              <img src="./src/maps/ostroga.webp" alt="avtofors-ostroga" />
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-logo">
+        <div class="logo-title">
+          <span>Avtofors</span>
+        </div>
+        <div class="container-info">
+          <div class="item">
+            <!-- <div class="icon">
+              <img src="./src/icons/telephone.svg" alt="dw12" />
+            </div> -->
+            <a href="https://maps.app.goo.gl/oTsKsPND91dqkSwY8" target="_blank">
+              <span>Instalatorów 7C, <br />02-237 Warszawa, Poland</span></a
+            >
+          </div>
+          <div class="item">
+            <div>
+              <span>NIP:</span>
+            </div>
+            <div>
+              <span>9522237869</span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="icon">
+              <img src="./src/icons/telephone.svg" alt="dw12" />
+            </div>
+            <a href="tel:+48576600198">
+              <span>+48 576 600 198</span>
+            </a>
+          </div>
+          <div class="item">
+            <div class="icon">
+              <img src="./src/icons/telephone.svg" alt="dw12" />
+            </div>
+            <a href="tel:+48881702834">
+              <span>+48 881 702 834</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="info-copyright">&copy; Avtofors 2024. "Warsaw"</div>
+      <div class="social-links">
+        <div class="item">
+          <div class="icon">
+            <img src="./src/icons/telegram.svg" alt="" />
+          </div>
+
+          <a href="https://t.me/+48576600198">
+            <span>Telegram</span>
+          </a>
+        </div>
+        <div class="item">
+          <div class="icon">
+            <img src="./src/icons/telegram.svg" alt="" />
+          </div>
+
+          <a href="https://t.me/+48881702834">
+            <span>Telegram</span>
+          </a>
+        </div>
+        <div class="item">
+          <div class="icon">
+            <img src="./src/icons/whatsapp.svg" alt="" />
+          </div>
+          <a href="https://wa.me/48881702834">
+            <span>WhatsApp</span>
+          </a>
+        </div>
+        <div class="item">
+          <div class="icon">
+            <img src="./src/icons/whatsapp.svg" alt="" />
+          </div>
+          <a href="viber://add?number=48881702834">
+            <span>Viber</span>
+          </a>
+        </div>
+        <!-- <div class="item">
+          <div class="icon">
+            <img src="./src/icons/whatsapp.svg" alt="" />
+          </div>
+          <span>whatsap</span>
+        </div> -->
+        <div class="item">
+          <div class="icon">
+            <img src="./src/icons/instagram.svg" alt="" />
+          </div>
+          <a href="https://www.instagram.com/_avtofors_/">
+            <span>Instagram</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup-form-container" id="popup-form-container">
+      <div class="wrapper">
+        <form id="call-back-form">
+          <button class="close-form-btn" id="close-form-btn">X</button>
+          <h3
+            class="title"
+            data-i18n="leave_your_data_to_receive_the_proposition"
+          >
+            Залиште свої дані для отримання пропозиції
+          </h3>
+          <h5 class="title" data-i18n="we_will_contact_you_as_soon_as_possible">
+            Ми зв'яжемося з вами найближчим часом
+          </h5>
+          <div class="input-container">
+            <label class="label" for="phone" data-i18n="phone">Phone:</label>
+            <input class="input" type="phone" id="phone" name="phone" />
+          </div>
+
+          <div class="input-container">
+            <label class="label" for="name" data-i18n="name">Name:</label>
+            <input class="input" type="text" id="name" name="name" />
+          </div>
+
+          <div class="input-container">
+            <label class="label" for="vin">VIN:</label>
+            <input class="input" type="text" id="vin" name="vin" />
+          </div>
+
+          <div class="input-container">
+            <label class="label" for="comment" data-i18n="comment"
+              >Comment:</label
+            >
+            <input class="input" type="text" id="comment" name="comment" />
+          </div>
+
+          <button class="submit-btn" type="submit" data-i18n="send">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup-thanks-container" id="popup-thanks-container">
+      <div class="wrapper">
+        <h3 class="title" data-i18n="application_sent_successfully">
+          Заявка успішно відправлена!
+        </h3>
+        <h5 class="title" data-i18n="we_will_contact_you_as_soon_as_possible">
+          Ми зв'яжемося з вами найближчим часом
+        </h5>
+        <button class="continue-btn" id="continue_btn" data-i18n="continue_btn">
+          Продовжити
+        </button>
+      </div>
+    </div>
+
+    <div class="container-button-phone" id="container-button-phone">
+      <div class="container-title" data-i18n="back_call">
+        Обратный <br />звонок
+      </div>
+      <div class="button-sticky-phone" id="button-phone">
+        <img
+          src="./src/icons/free-icon-phone-call.webp"
+          alt="free-icon-phone-call"
+        />
+      </div>
+    </div>
+  </body>
+
+  <script src="./script-min.js"></script>
+  <script src="./swiper-min.js"></script>
+  <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
+  <script src="./scriptLang-min.js"></script>
+  <script src="./customAccordion-min.js"></script>
+</html>
